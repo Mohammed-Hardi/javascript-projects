@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EduLearn – Course View</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <div class="logo">Edu<span>Learn</span></div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="lecture.html">Lecturer</a>
+        <a href="student.html">Student</a>
+        <button class="btn btn-primary btn-sm">My Profile</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <div class="container">
+      <a href="student.html" style="font-size:0.85rem; color:var(--primary); font-weight:700; display:flex; align-items:center; gap:0.4rem; margin-bottom:1rem;">
+        <span>←</span> Back to Dashboard
+      </a>
+      <h1>Introduction to Web Development</h1>
+      <p>👨‍🏫 Dr. Amara &nbsp;·&nbsp; 👩‍🎓 42 students &nbsp;·&nbsp; 📁 8 materials</p>
+      <div style="margin-top:1.5rem; max-width:400px;">
+        <div class="progress-bar">
+          <div class="progress-fill" data-width="70"></div>
+        </div>
+        <small style="color:var(--gray-600); font-weight:600;">70% Course Completion</small>
+      </div>
+    </div>
+  </div>
+
+  <!-- COURSE BODY -->
+  <div class="dashboard-layout">
+
+    <!-- MAIN -->
+    <div>
+      <!-- TABS -->
+      <div class="tabs" style="display:flex; gap:1rem; border-bottom:2px solid var(--gray-200); margin-bottom:2rem;">
+        <button class="tab-btn active" data-tab="tab-content" style="padding:1rem; font-weight:700; background:none; border:none; border-bottom:3px solid transparent; cursor:pointer; color:var(--gray-600);">📚 Course Content</button>
+        <button class="tab-btn" data-tab="tab-discussions" style="padding:1rem; font-weight:700; background:none; border:none; border-bottom:3px solid transparent; cursor:pointer; color:var(--gray-600);">💬 Discussions</button>
+      </div>
+
+      <!-- TAB: CONTENT -->
+      <div class="tab-content active" id="tab-content">
+        <div class="card" style="padding:0;">
+          <div style="padding:1.5rem; border-bottom:1px solid var(--gray-100); background:var(--gray-100); border-radius:16px 16px 0 0;">
+            <h3 style="font-size:1rem;">Module 1: Getting Started</h3>
+          </div>
+          
+          <div style="padding:1rem;">
+            <!-- Material Item 1 -->
+            <div class="material-item" style="display:flex; align-items:center; gap:1rem; padding:1rem; border-bottom:1px solid var(--gray-100);">
+              <div style="font-size:1.5rem; background:var(--primary-light); width:48px; height:48px; display:flex; align-items:center; justify-content:center; border-radius:12px;">🎬</div>
+              <div style="flex:1;">
+                <div style="font-weight:700;">Lecture 1: Intro to HTML</div>
+                <div style="font-size:0.85rem; color:var(--gray-600);">Video · 12 min</div>
+              </div>
+              <span class="badge badge-green">✅ Done</span>
+              <button class="btn btn-outline btn-sm" onclick="showNotification('▶️ Playing Lecture 1...')">Watch</button>
+            </div>
+
+            <!-- Material Item 2 -->
+            <div class="material-item" style="display:flex; align-items:center; gap:1rem; padding:1rem; border-bottom:1px solid var(--gray-100);">
+              <div style="font-size:1.5rem; background:#D1FAE5; width:48px; height:48px; display:flex; align-items:center; justify-content:center; border-radius:12px;">📄</div>
+              <div style="flex:1;">
+                <div style="font-weight:700;">Reading: CSS Box Model</div>
+                <div style="font-size:0.85rem; color:var(--gray-600);">Document · 8 pages</div>
+              </div>
+              <span class="badge badge-green">✅ Done</span>
+              <button class="btn btn-outline btn-sm" onclick="showNotification('📥 Downloading...')">Download</button>
+            </div>
+
+            <!-- Material Item 3 -->
+            <div class="material-item" style="display:flex; align-items:center; gap:1rem; padding:1rem; border-bottom:1px solid var(--gray-100);">
+              <div style="font-size:1.5rem; background:#FEF3C7; width:48px; height:48px; display:flex; align-items:center; justify-content:center; border-radius:12px;">❓</div>
+              <div style="flex:1;">
+                <div style="font-weight:700;">Quiz 1: HTML Basics</div>
+                <div style="font-size:0.85rem; color:var(--gray-600);">Quiz · 10 questions</div>
+              </div>
+              <span class="badge badge-green">✅ Done</span>
+              <button class="btn btn-outline btn-sm" onclick="showNotification('📊 Score: 90%')">Review</button>
+            </div>
+
+            <!-- Material Item 4 -->
+            <div class="material-item" style="display:flex; align-items:center; gap:1rem; padding:1rem; border-bottom:1px solid var(--gray-100);">
+              <div style="font-size:1.5rem; background:#FCE7F3; width:48px; height:48px; display:flex; align-items:center; justify-content:center; border-radius:12px;">📝</div>
+              <div style="flex:1;">
+                <div style="font-weight:700;">Assignment 2: Build a Landing Page</div>
+                <div style="font-size:0.85rem; color:var(--gray-600);">Assignment · Due: Friday</div>
+              </div>
+              <span class="badge badge-amber">⏳ Pending</span>
+              <button class="btn btn-primary btn-sm" onclick="showNotification('📤 Submission page opening...')">Submit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB: DISCUSSIONS -->
+      <div class="tab-content" id="tab-discussions" style="display:none;">
+        <div class="card">
+          <form id="discussionForm" style="margin-bottom:2rem;">
+            <div style="display:flex; gap:1rem;">
+              <div style="width:40px; height:40px; border-radius:50%; background:var(--accent); color:white; display:flex; align-items:center; justify-content:center; font-weight:700;">F</div>
+              <div style="flex:1;">
+                <textarea id="discussionInput" placeholder="Ask a question or start a discussion..." style="width:100%; padding:1rem; border:1px solid var(--gray-200); border-radius:12px; font-family:inherit; outline:none; resize:none;"></textarea>
+                <div style="display:flex; justify-content:flex-end; margin-top:0.5rem;">
+                  <button type="submit" class="btn btn-primary btn-sm">Post Comment</button>
+                </div>
+              </div>
+            </div>
+          </form>
+
+          <div id="discussionList">
+            <!-- Instructor Post -->
+            <div class="discussion-item" style="padding:1.5rem; border:1px solid var(--gray-100); border-radius:12px; margin-bottom:1rem;">
+              <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:0.75rem;">
+                <div style="width:36px; height:36px; border-radius:50%; background:var(--primary); color:white; display:flex; align-items:center; justify-content:center; font-weight:700;">A</div>
+                <span style="font-weight:700;">Dr. Amara</span>
+                <span class="badge badge-blue">Instructor</span>
+                <span style="font-size:0.75rem; color:var(--gray-400); margin-left:auto;">2 days ago</span>
+              </div>
+              <div style="color:var(--gray-800); font-size:0.95rem;">Assignment 2 has been posted! Build a landing page using HTML and CSS. Submit by Friday. Feel free to ask any questions below.</div>
+              <div style="margin-top:1rem; font-size:0.85rem; color:var(--primary); font-weight:600; cursor:pointer;">💬 4 replies</div>
+            </div>
+
+            <!-- Student Post -->
+            <div class="discussion-item" style="padding:1.5rem; border:1px solid var(--gray-100); border-radius:12px; margin-bottom:1rem;">
+              <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:0.75rem;">
+                <div style="width:36px; height:36px; border-radius:50%; background:#10B981; color:white; display:flex; align-items:center; justify-content:center; font-weight:700;">K</div>
+                <span style="font-weight:700;">Kofi Asante</span>
+                <span class="badge badge-gray">Student</span>
+                <span style="font-size:0.75rem; color:var(--gray-400); margin-left:auto;">1 day ago</span>
+              </div>
+              <div style="color:var(--gray-800); font-size:0.95rem;">Can we use any CSS framework like Bootstrap for Assignment 2, or just plain CSS?</div>
+              <div style="margin-top:1rem; font-size:0.85rem; color:var(--primary); font-weight:600; cursor:pointer;">💬 1 reply</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SIDEBAR -->
+    <div>
+      <div class="sidebar-card" style="text-align:center;">
+        <h3>📊 Your Progress</h3>
+        <div style="margin:1.5rem 0;">
+          <div style="font-family:'Sora',sans-serif; font-size:3rem; font-weight:800; color:var(--primary);">70%</div>
+          <p style="font-size:0.85rem; color:var(--gray-600);">Course Completion</p>
+        </div>
+        <div class="progress-bar"><div class="progress-fill" data-width="70"></div></div>
+        <div style="display:flex; justify-content:space-between; font-size:0.8rem; color:var(--gray-600); margin-top:1rem; font-weight:600;">
+          <span>✅ 4 Modules done</span>
+          <span>⏳ 2 Modules left</span>
+        </div>
+      </div>
+
+      <div class="sidebar-card">
+        <h3>📅 Upcoming</h3>
+        <div class="activity-item">
+          <div class="activity-dot" style="background:var(--warning);"></div>
+          <div>
+            <div class="activity-text"><strong>Assignment 2</strong></div>
+            <div class="activity-time">Due: Friday</div>
+          </div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-dot" style="background:var(--primary);"></div>
+          <div>
+            <div class="activity-text"><strong>Lecture 8</strong> unlocks after submission</div>
+            <div class="activity-time">Coming soon</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-card">
+        <h3>📥 Downloads</h3>
+        <div style="display:flex; flex-direction:column; gap:0.75rem;">
+          <button class="btn btn-outline btn-sm" onclick="showNotification('📥 CSS Box Model.pdf downloaded!')">CSS Box Model.pdf</button>
+          <button class="btn btn-outline btn-sm" onclick="showNotification('📥 Slides downloaded!')">Lecture 1 Slides</button>
+          <button class="btn btn-outline btn-sm" onclick="showNotification('📥 Assignment brief downloaded!')">Assignment 2 Brief</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="container">
+      &copy; 2026 EduLearn. Built with ❤️ for the future of education.
+    </div>
+  </footer>
+
+  <div class="notification" id="notification"></div>
+  <script src="main.js"></script>
+</body>
+</html>

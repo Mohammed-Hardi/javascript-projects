@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EduLearn – Lecturer Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <div class="logo">Edu<span>Learn</span></div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="lecture.html" class="active">Lecturer</a>
+        <a href="student.html">Student</a>
+        <button class="btn btn-primary btn-sm">Profile</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <div class="container">
+      <h1>👋 Welcome back, Dr. Amara</h1>
+      <p>Here's an overview of your courses and student engagement.</p>
+    </div>
+  </div>
+
+  <!-- DASHBOARD -->
+  <div class="dashboard-layout">
+
+    <!-- MAIN COLUMN -->
+    <div>
+      <!-- STATS -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon">📘</div>
+          <div class="stat-label">Active Courses</div>
+          <div class="stat-value">4</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">👩‍🎓</div>
+          <div class="stat-label">Total Students</div>
+          <div class="stat-value">128</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">📁</div>
+          <div class="stat-label">Materials</div>
+          <div class="stat-value">20</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">📈</div>
+          <div class="stat-label">Engagement</div>
+          <div class="stat-value">74%</div>
+        </div>
+      </div>
+
+      <!-- UPLOAD ZONE -->
+      <div class="section-title">Upload New Material</div>
+      <div class="upload-zone" id="uploadZone">
+        <div class="upload-icon">☁️</div>
+        <p><strong>Click to upload</strong> or drag & drop a file here</p>
+        <p style="color:var(--gray-400); font-size:0.85rem;">Supports PDF, MP4, DOCX, and more</p>
+      </div>
+
+      <!-- COURSE LIST -->
+      <div class="section-title">Your Courses</div>
+
+      <!-- Course 1 -->
+      <div class="course-card">
+        <div class="course-thumb">
+          <img src="images/web-dev.jpg" alt="Web Development">
+        </div>
+        <div class="course-details">
+          <div class="course-card-header">
+            <div>
+              <h3>Introduction to Web Development</h3>
+              <div class="course-meta">👩‍🎓 42 students · 📁 8 materials</div>
+            </div>
+            <span class="badge badge-green">Active</span>
+          </div>
+          <div class="progress-container">
+            <div class="progress-bar"><div class="progress-fill" style="width: 82%;"></div></div>
+            <small style="color:var(--gray-600);">82% avg engagement</small>
+          </div>
+          <div class="course-actions">
+            <button class="btn btn-primary btn-sm">Manage</button>
+            <button class="btn btn-outline btn-sm">Analytics</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Course 2 -->
+      <div class="course-card">
+        <div class="course-thumb">
+          <img src="images/dsa.jpg" alt="Data Structures">
+        </div>
+        <div class="course-details">
+          <div class="course-card-header">
+            <div>
+              <h3>Data Structures & Algorithms</h3>
+              <div class="course-meta">👩‍🎓 35 students · 📁 6 materials</div>
+            </div>
+            <span class="badge badge-blue">Active</span>
+          </div>
+          <div class="progress-container">
+            <div class="progress-bar"><div class="progress-fill" style="width: 65%;"></div></div>
+            <small style="color:var(--gray-600);">65% avg engagement</small>
+          </div>
+          <div class="course-actions">
+            <button class="btn btn-primary btn-sm">Manage</button>
+            <button class="btn btn-outline btn-sm">Analytics</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Course 3 -->
+      <div class="course-card">
+        <div class="course-thumb">
+          <img src="images/ux-design.jpg" alt="UX Design">
+        </div>
+        <div class="course-details">
+          <div class="course-card-header">
+            <div>
+              <h3>UX Design Fundamentals</h3>
+              <div class="course-meta">👩‍🎓 51 students · 📁 6 materials</div>
+            </div>
+            <span class="badge badge-amber">Draft</span>
+          </div>
+          <div class="progress-container">
+            <div class="progress-bar"><div class="progress-fill" style="width: 40%;"></div></div>
+            <small style="color:var(--gray-600);">40% avg engagement</small>
+          </div>
+          <div class="course-actions">
+            <button class="btn btn-primary btn-sm">Manage</button>
+            <button class="btn btn-outline btn-sm">Analytics</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SIDEBAR -->
+    <div>
+      <div class="sidebar-card">
+        <h3>🔔 Notifications</h3>
+        <div class="activity-item">
+          <div class="activity-dot" style="background:#10B981;"></div>
+          <div>
+            <div class="activity-text">Kofi submitted Assignment 2</div>
+            <div class="activity-time">10 mins ago</div>
+          </div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-dot" style="background:#2563EB;"></div>
+          <div>
+            <div class="activity-text">New discussion reply in Web Dev</div>
+            <div class="activity-time">1 hour ago</div>
+          </div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-dot" style="background:#F59E0B;"></div>
+          <div>
+            <div class="activity-text">Quiz 1 deadline is tomorrow</div>
+            <div class="activity-time">3 hours ago</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-card">
+        <h3>⚡ Quick Actions</h3>
+        <div style="display:flex; flex-direction:column; gap:0.75rem;">
+          <button class="btn btn-primary">➕ Upload Material</button>
+          <button class="btn btn-outline">📘 Create New Course</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="container">
+      &copy; 2026 EduLearn. Built with ❤️ for the future of education.
+    </div>
+  </footer>
+
+  <div class="notification" id="notification">Action performed successfully!</div>
+
+</body>
+</html>

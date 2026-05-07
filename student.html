@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EduLearn – Student Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <div class="logo">Edu<span>Learn</span></div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="lecture.html">Lecturer</a>
+        <a href="student.html" class="active">Student</a>
+        <button class="btn btn-primary btn-sm">My Profile</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <div class="container">
+      <h1>🎓 Welcome, Fadlan!</h1>
+      <p>Keep up the great work — you're making solid progress this week.</p>
+    </div>
+  </div>
+
+  <!-- DASHBOARD -->
+  <div class="dashboard-layout">
+
+    <!-- MAIN -->
+    <div>
+      <!-- STATS -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon">📘</div>
+          <div class="stat-label">Enrolled</div>
+          <div class="stat-value">3</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">✅</div>
+          <div class="stat-label">Completed</div>
+          <div class="stat-value">12</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">🔥</div>
+          <div class="stat-label">Day Streak</div>
+          <div class="stat-value">5</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">⭐</div>
+          <div class="stat-label">Achievements</div>
+          <div class="stat-value">8</div>
+        </div>
+      </div>
+
+      <!-- ENROLLED COURSES -->
+      <div class="section-title">Your Courses</div>
+
+      <div class="course-card">
+        <div class="course-thumb">
+          <img src="images/web-dev.jpg" alt="Web Development">
+        </div>
+        <div class="course-details">
+          <div class="course-card-header">
+            <div>
+              <h3>Introduction to Web Development</h3>
+              <div class="course-meta">👨‍🏫 Dr. Amara · 📅 Due: Fri</div>
+            </div>
+            <span class="badge badge-amber">In Progress</span>
+          </div>
+          <div class="progress-container">
+            <div class="progress-bar"><div class="progress-fill" style="width: 70%;"></div></div>
+            <small style="color:var(--gray-600);">70% complete</small>
+          </div>
+          <div class="course-actions">
+            <button class="btn btn-primary btn-sm">Continue</button>
+            <button class="btn btn-outline btn-sm">Resources</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="course-card">
+        <div class="course-thumb">
+          <img src="images/dsa.jpg" alt="Data Structures">
+        </div>
+        <div class="course-details">
+          <div class="course-card-header">
+            <div>
+              <h3>Data Structures & Algorithms</h3>
+              <div class="course-meta">👨‍🏫 Dr. Mensah · 📅 Quiz: Mon</div>
+            </div>
+            <span class="badge badge-blue">Active</span>
+          </div>
+          <div class="progress-container">
+            <div class="progress-bar"><div class="progress-fill" style="width: 45%;"></div></div>
+            <small style="color:var(--gray-600);">45% complete</small>
+          </div>
+          <div class="course-actions">
+            <button class="btn btn-primary btn-sm">Continue</button>
+            <button class="btn btn-outline btn-sm">Resources</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="course-card">
+        <div class="course-thumb">
+          <img src="images/ux-design.jpg" alt="UX Design">
+        </div>
+        <div class="course-details">
+          <div class="course-card-header">
+            <div>
+              <h3>UX Design Fundamentals</h3>
+              <div class="course-meta">👨‍🏫 Prof. Owusu · 📅 No deadline</div>
+            </div>
+            <span class="badge badge-green">On Track</span>
+          </div>
+          <div class="progress-container">
+            <div class="progress-bar"><div class="progress-fill" style="width: 90%;"></div></div>
+            <small style="color:var(--gray-600);">90% complete</small>
+          </div>
+          <div class="course-actions">
+            <button class="btn btn-primary btn-sm">Continue</button>
+            <button class="btn btn-outline btn-sm">Resources</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ACTIVITY FEED -->
+      <div class="section-title" style="margin-top:2rem;">Recent Activity</div>
+      <div class="card">
+        <div class="activity-item">
+          <div class="activity-dot" style="background:#10B981;"></div>
+          <div>
+            <div class="activity-text">You completed <strong>Lecture 7: CSS Flexbox</strong></div>
+            <div class="activity-time">Today, 10:30 AM</div>
+          </div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-dot" style="background:#2563EB;"></div>
+          <div>
+            <div class="activity-text">Dr. Amara posted <strong>Assignment 2</strong> in Web Dev</div>
+            <div class="activity-time">Yesterday, 3:00 PM</div>
+          </div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-dot" style="background:#F59E0B;"></div>
+          <div>
+            <div class="activity-text">You earned the <strong>🔥 5-Day Streak</strong> badge!</div>
+            <div class="activity-time">Yesterday, 8:00 AM</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- SIDEBAR -->
+    <div>
+      <div class="sidebar-card">
+        <h3>🏆 Achievements</h3>
+        <div style="display:flex; flex-wrap:wrap; gap:0.5rem;">
+          <span class="badge badge-amber">🔥 5-Day Streak</span>
+          <span class="badge badge-green">✅ First Submit</span>
+          <span class="badge badge-blue">📘 Bookworm</span>
+          <span class="badge badge-gray">🎯 Quiz Master</span>
+        </div>
+      </div>
+
+      <div class="sidebar-card">
+        <h3>📅 Upcoming</h3>
+        <div class="activity-item">
+          <div class="activity-dot" style="background:#F97316;"></div>
+          <div>
+            <div class="activity-text"><strong>Assignment 2</strong> – Web Dev</div>
+            <div class="activity-time">Due: Friday</div>
+          </div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-dot" style="background:#F59E0B;"></div>
+          <div>
+            <div class="activity-text"><strong>Quiz 3</strong> – Data Structures</div>
+            <div class="activity-time">Due: Monday</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="container">
+      &copy; 2026 EduLearn. Built with ❤️ for the future of education.
+    </div>
+  </footer>
+
+  <div class="notification" id="notification">Action performed successfully!</div>
+
+</body>
